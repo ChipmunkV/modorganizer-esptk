@@ -2,8 +2,11 @@
 #include "subrecord.h"
 #include "tes3subrecord.h"
 #include "espexceptions.h"
+#include <cstring>
 #include <sstream>
 #include <bitset>
+#include <cassert> // UNUSED
+#include <iostream> // UNUSED
 
 
 ESP::File::File(const std::string &fileName)
@@ -14,7 +17,8 @@ ESP::File::File(const std::string &fileName)
 
 ESP::File::File(const std::wstring &fileName)
 {
-  m_File.open(fileName, std::fstream::in | std::fstream::binary);
+//  m_File.open(fileName, std::fstream::in | std::fstream::binary);
+  std::cerr << "FIXME: Not implemented" + std::string(" \e]8;;eclsrc://") + __FILE__ + ":" + std::to_string(__LINE__) + "\a" + __FILE__ + ":" + std::to_string(__LINE__) + "\e]8;;\a\n"; assert(false && "Not implemented");
   init();
 }
 

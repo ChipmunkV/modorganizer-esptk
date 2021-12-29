@@ -1,4 +1,5 @@
 #include "record.h"
+#include <cstring>
 #include "espexceptions.h"
 
 

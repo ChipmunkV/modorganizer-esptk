@@ -2,6 +2,7 @@
 #define ESPTYPES_H
 
 
+#include <cstring>
 #include <istream>
 
 
