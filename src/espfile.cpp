@@ -15,12 +15,13 @@ ESP::File::File(const std::string &fileName)
   init();
 }
 
+#ifdef _WIN32
 ESP::File::File(const std::wstring &fileName)
 {
-//  m_File.open(fileName, std::fstream::in | std::fstream::binary);
-  std::cerr << "FIXME: Not implemented" + std::string(" \e]8;;eclsrc://") + __FILE__ + ":" + std::to_string(__LINE__) + "\a" + __FILE__ + ":" + std::to_string(__LINE__) + "\e]8;;\a\n"; assert(false && "Not implemented");
+  m_File.open(fileName, std::fstream::in | std::fstream::binary);
   init();
 }
+#endif
 
 
 class membuf : public std::basic_streambuf<char>
